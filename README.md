@@ -1,7 +1,26 @@
 # rest-kotlin-quickstart Project
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
 
+# Quick Start
+
+This showcases Quarkus native capabilities by using Quarkus extensions for
+REST, Hibernate, Postgresql, Panache and creating a native executable using GraalVM
+
+```shell script
+# launch backend database 
+docker compose up -d
+
+# create native image
+./mvnw package -Pnative
+
+# launch and enjoy 
+./target/rest-kotlin-quickstart-1.0.0-SNAPSHOT-runner
+```
+
+open http://localhost:8080/hello/FUN to see the latest Quote of the day
+
+
+This project uses Quarkus, the Supersonic Subatomic Java Framework.
 If you want to learn more about Quarkus, please visit its website: https://quarkus.io/ .
 
 ## Running the application in dev mode
